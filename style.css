@@ -155,9 +155,15 @@ body {
   .container {
     display: none;
   }
+
+   section .preview-card {
+    margin-bottom: 5rem;
+  }
+  
   header {
     padding-bottom: 10rem;
   }
+  
   .hiden-text {
     display: block;
     text-align: center;
