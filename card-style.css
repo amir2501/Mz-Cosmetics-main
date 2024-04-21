@@ -35,6 +35,7 @@ section .preview-card .container-text ins {
   font-weight: 700;
   font-style: normal;
   font-variation-settings: "SOFT" 0, "WONK" 0;
+  text-transform: capitalize;
 }
 
 section .preview-card .container-text p,
