@@ -158,6 +158,11 @@ body {
   header {
     padding-bottom: 10rem;
   }
+
+  section .preview-card {
+    margin-bottom: 5rem;
+  }
+
   .hiden-text {
     display: block;
     text-align: center;
