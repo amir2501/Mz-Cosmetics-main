@@ -32,6 +32,7 @@ body {
   height: 5rem;
   position: fixed;
   width: 100vw;
+  z-index: 4;
 }
 
 .topnav h1 {
@@ -39,134 +40,136 @@ body {
   color: #900c3f;
 }
 
-.topnav button {
-  position: relative;
-  top: 20px;
-  left: 10px;
-  background-color: initial;
-  border: none;
-}
-
-.topnav button img {
-  position: relative;
-  max-width: 30px;
-  max-height: 30px;
+#lips,
+#palettes,
+#eye,
+#bags,
+#make-up-sets {
+  border-bottom: 1rem dotted #240a34;
 }
 
 .container {
   padding-top: 5rem;
-  display: flex;
-  flex-direction: row;
   min-height: 100vh;
   min-width: 100vw;
-  background-color: rgb(5, 0, 0);
+  background-color: #ffbbcc;
 }
 
-.container .text {
-  color: #ffe5b4;
-  font-weight: 900;
-  transition: all 0.2s;
+.container h1 {
+  margin-left: 4rem;
+  margin-top: 2rem;
   font-size: 4rem;
+  color: #ffeecc;
 }
 
-.container .make-up {
-  width: 50vw;
-  height: 100vh;
+.container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10rem;
 }
 
-.container .make-up::before {
-  content: " ";
-  display: block;
-  background: url("./images/make-up.webp");
-  background-size: cover;
+.container ul li {
+  width: 32rem;
+  height: 30rem;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-}
-
-.container .make-up:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 60vw;
-}
-
-.container .acc:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 60vw;
-}
-
-.container .make-up:hover .text {
-  color: #900c3f;
-  transition: all 0.2s;
-}
-
-.container .make-up:hover .text .hiden {
-  display: block;
-  color: #891652;
-  transition: all 0.2s;
-}
-
-.container .acc:hover .text .hiden {
-  display: block;
-  color: #891652;
-  transition: all 0.2s;
-}
-
-.container .acc:hover .text {
-  color: #900c3f;
-  transition: all 0.2s;
-}
-
-.container .acc {
-  width: 50vw;
-  height: 100vh;
-}
-
-.container .acc::before {
-  content: " ";
-  display: block;
-  background: url("./images/acc.webp");
   background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
+  list-style-type: none;
+  margin: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  box-shadow: 4px 0px 40px #240a34;
 }
 
-.make-up > .center {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
+.container ul li span {
+  font-size: 5rem;
+  color: #ac59a0;
+  text-transform: capitalize;
+  background-color: #ffc4ff;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  width: 100%;
+  padding-left: 1rem;
 }
-.acc > .center {
-  position: absolute;
-  top: 50%;
-  right: 25%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
+
+.container ul .card1,
+.container ul .card2,
+.container ul .card3,
+.container ul .card5,
+.container ul .card4 {
+  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
+  transition: all 0.2s;
 }
+
+.container ul .card1:hover,
+.container ul .card2:hover,
+.container ul .card3:hover,
+.container ul .card5:hover,
+.container ul .card4:hover {
+  filter: grayscale(10%);
+  -webkit-filter: grayscale(10%);
+  transition: all 0.2s;
+  box-shadow: 0px 5px 50px #240a34;
+}
+
+.container ul .card1 {
+  background-image: url("./images/lip-make-up.webp");
+  background-color: red;
+}
+.container ul .card2 {
+  background-image: url("./images/powder.webp");
+  background-color: green;
+}
+
+.container ul .card3 {
+  background-image: url("./images/eye-make-up.jpeg");
+}
+
+.container ul .card4 {
+  background-image: url("./images/make-up-set.webp");
+}
+
+.container ul .card5 {
+  background-image: url("./images/hermes-cover.webp");
+}
+
 .hiden-text {
   display: none;
 }
 
 @media (max-width: 860px) {
-  .container {
-    display: none;
-  }
-  header {
-    padding-bottom: 10rem;
-  }
-
   section .preview-card {
     margin-bottom: 5rem;
   }
 
-  .hiden-text {
-    display: block;
-    text-align: center;
-    color: #900c3f;
-    padding-bottom: 4rem;
+  .container h1 {
+    font-size: 4rem;
+  }
+  .container ul li {
+    width: 20rem;
+    height: 20rem;
+  }
+  .container ul li span {
+    font-size: 2.5rem;
+  }
+  .container ul .card1,
+  .container ul .card2,
+  .container ul .card3,
+  .container ul .card5,
+  .container ul .card4 {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    transition: all 0.2s;
+  }
+  .container ul li {
+    padding: 0px;
+    margin: 1rem 0rem;
+  }
+  .container ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
 }
