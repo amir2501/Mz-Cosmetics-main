@@ -26,6 +26,7 @@ section .preview-card {
   max-width: 70rem;
   display: flex;
   box-shadow: 4px 0px 50px rgba(0, 0, 0, 0.352);
+  animation: ease-in-out 3s;
 }
 
 section .preview-card .container-text h1,
